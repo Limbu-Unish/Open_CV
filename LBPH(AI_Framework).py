@@ -52,4 +52,16 @@ for person_name in os.listdir(data_set_path):
             Faces.append(resized_face)
             Labels.append(current_label)
 
-    current_label += 1     
+    #To store the next image_name
+    current_label += 1
+
+#Representing the list as array using np
+Final_Faces = np.array(Faces)
+FInal_Labels = np.array(Labels)
+
+#Tranning the recognizer
+recognizer.train(Final_Faces, FInal_Labels)
+print('Successfully Trainned the images.')
+
+
+Test_Image = cv.imread()
