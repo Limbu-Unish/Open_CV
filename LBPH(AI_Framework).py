@@ -70,7 +70,7 @@ Test_Image = cv.imread(r'Tranning_Images/Xxxx_Ten/image copy 8.png')
 T_Img_Gray = cv.cvtColor(Test_Image, cv.COLOR_BGR2GRAY)
 
 #Tracking Face in the test image
-T_Img_Face = face_cascade.detectMultiScale(T_Img_Gray, scaleFactor=1.1, minNeighbors=5)
+T_Img_Face = face_cascade.detectMultiScale(T_Img_Gray, scaleFactor=1.2, minNeighbors=5)
 
 #Cropping and resizing the face from the Test_Image
 for (x,y,w,h) in T_Img_Face:
